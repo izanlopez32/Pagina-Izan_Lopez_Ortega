@@ -20,7 +20,7 @@
             border-radius: 12px;        }
 
         .header {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            background-color:purple;
             color: #fff;
             padding: 24px 28px;
         }
