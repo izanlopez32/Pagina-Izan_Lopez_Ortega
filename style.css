@@ -1,4 +1,3 @@
-  <style>
     * {
       /*He descubierto que podemos "declarar" variables en css, por lo que lo haremos con 3 colores que usaremos mucho a lo largo de este style*/
       --morado: #8b008b;
@@ -118,4 +117,3 @@
     footer a {
       color: #e0afe0;
     }
-  </style>
