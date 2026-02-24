@@ -1,55 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Página personal - Ethan</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel='stylesheet' href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Izan Lopez Ortega</title>
+
+  <!-- Link para importar Bootstrap en su parte de CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Iconitos de Bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <main class="card">
-        <header class="header">
-            <h1>Izan Lopez Ortega</h1>
-            <p>Estudiante de 2ºDAW(aunque no lo parezca) · Valdemoro, Comunidad de Madrid</p>
-        </header>
 
-        <section class="content">
-            <div class="foto">
-                <img src="img/foto.jpg" alt="Foto de Ethan">
-            </div>
+  <!-- HEADER -->
+  <header>
+    <!--Ponemos container para que bootstrap sepa que este div será uno en los que irá informacion importante para nuestra página,
+    con ello conseguimos que centre el contenido, le de un ancho maximo segun el tamaño de la pantalla y añada un poco de padding para que nada se pegue con el borde-->
+    <div class="container">
+      <h1>Izan Lopez Ortega</h1>
+      <!--Con mb-0 evitamos que nuestro parrafo contenga espacio debajo suya, no se queda al ras del elemento pero se queda con el bottom mucho mas cerca que si no lo pusieramos-->
+      <p class="subtitulo mb-0">
+        <!--Usaremos i para posicionar nuestros iconos y no para escribir en cursida,
+        con bi le decimos que queremos usar un Bootstrap Icon y tras ello deberemos de decirle el
+        nombre del icono, estos iconos podemos encontrarlos en internet, pero en mi caso 
+        he pedido ayuda a la ia para saber donde podria encontrar iconos en internet, dando 
+        resultado a estas clases y a las siguientes donde declararemos los iconos.(la pagina de los iconos está en la pagina oficial de bootstrap y es https://icons.getbootstrap.com/)-->
+        <i class="bi bi-mortarboard-fill"></i> Estudiante de 2ºDAW (aunque no lo parezca) &nbsp;<b>.</b>&nbsp;
+        <i class="bi bi-geo-alt-fill"></i> Valdemoro, Comunidad de Madrid
+      </p>
+    </div>
+  </header>
 
-            <div class="info">
-                <h2>Datos personales</h2>
-                <p><span class="label">Nombre completo:</span> Izan López Ortega</p>
-                <p><span class="label">Fecha de nacimiento:</span> 29 de Agosto del 2005</p>
-                <p><span class="label">Localidad:</span> Valdemoro (Madrid, España)</p>
-                <p><span class="label">Email:</span> <a href=izan.lopez32@educa.madrid.org">izan.lopez32@educa.madrid.org</a></p>
+  <!-- CONTENIDO PRINCIPAL -->
 
-                <div class="section">
-                    <h3>Sobre mí</h3>
-                    <p>
-                        Soy estudiante de 2ºDAW en el Scarlatti (para mi suerte o desgracia), me gusta mucho la música y coger trenes por encima de mis posibilidades económicas.
-                        Tambien me gusta la programación(depende del dia), los animalitos pequeños y los roedores(no pienso cambiar mi foto de perfil de GitHub). Centrandonos en mi parte mas profesional ofrezco desarrollo web con nuevas tecnologías de la mano con una 
-                        ligereza notoria a la hora de manejarme en cualquier dispositivo. Si deseas ver un poco mas de mi portfolio podrás ver mis ejercicios y trabajos mas avanzados en mi página de Github.
-                    </p>
-                    <a href="CV Izan López Practicas 2026.pdf">Pulsa aquí para ver mi CV!</a>
-                </div>
+  <!--Declarando my-4 conseguimos tocar el margen del eje vertical de nuestro main, dando resultado a un margin tanto en bottom como en top-->
+  <main class="container my-4">
+    <!--p4 seria equivalente un padding de 4 por los 4 lados al elemento(en bootstrap la escala solo va de 0 al 5 por lo que he investigado), con p-md-5 le decimos que
+    en el caso de que la pantalla sea mediana o grande aplique un tamaño mayor(en este caso el maximo permitido, 5)-->
+    <div class="partecentral p-4 p-md-5">
 
-                <div class="section">
-                    <h3>Intereses</h3>
-                    <ul>
-                        <li>Animalitos</li>
-                        <li>Música</li>
-                        <li>Libros y películas sobre romance adolescente y cursi(muy cursi)</li>
-                        <li>Videojuegos(para sorpresa de nadie)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+      <!-- foto y datos personales -->
+      <!--Indicamos que el fiv es una fila dentro de nuestro sistema de rejilla, tras ello le aplicamos un gap(g) de 4 lo cual hace que haya un espacio entre filas y columnas y
+      haremos que tenga una alineación desde arriba con align-items-start(no tiene mucha diferencia con css)-->
+      <div class="row g-4 align-items-start">
+
+        <!-- Foto -->
+        <!--Con col-auto le decimos a Bootstrap que queremos que la columna tenga el ancho que tenga el contenido que le vayamos a proporcionar.
+        d-flex es literalmente display:flex y justify-content-center es...igual que en css-->
+        <div class="col-auto d-flex justify-content-center">
+          <div class="foto">
+          <img src="img/foto.jpg">
+          </div>
+        </div>
+
+        <!-- Datos personales -->
+         <!--Aqui hay una pequeña variante de col, ya que ahora solo llamamos a col y nada mas, esto hace que todo el espacio se distribuya entre las columnas que le vayamos a añadir-->
+        <div class="col">
+          <h2 class="titulos">
+            <!--Nos referimos con me-1 al margen externo del elemento, ese que se encuentra a la derecha del mismo, le pondremos 1 ya que queremos un margen minimo-->
+            <i class="bi bi-person-vcard me-1"></i> Datos personales
+          </h2>
+          <!--Para no depender de la etiqueta <br> en nuestro codigo ni de nuestro css usaremos la etiqueta mb la cual son las siglas de Margin Bottom, le pondremos 2 en este caso para
+          que exista ALGO de espacio entre columnas, pero sin pasarse-->
+          <div class="mb-2">
+            <span class="dato-titulo">Nombre completo:</span>
+            <span class="dato-valor">Izan López Ortega</span>
+          </div>
+          <div class="mb-2">
+            <span class="dato-titulo">Fecha de nacimiento:</span>
+            <span class="dato-valor">29 de agosto de 2005</span>
+          </div>
+          <div class="mb-2">
+            <span class="dato-titulo">Localidad:</span>
+            <span class="dato-valor">Valdemoro (Madrid, España)</span>
+          </div>
+          <div class="mb-2">
+            <span class="dato-titulo">Email:</span>
+            <span class="dato-valor">
+              <!--Este mailto realmente funcionaria y seria mas util si existiera una aplicacion para Gmail, pero al solo existir Outlook en mi ordenador solo puedo saber que funciona ahi,
+              en pocas palabras te prepara para hacer un correo con dicho destinatario.-->
+              <a href="mailto:izan.lopez32@educa.madrid.org">
+                <i class="bi bi-envelope-fill me-1"></i>izan.lopez32@educa.madrid.org
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4"/>
+
+      <!-- SOBRE MÍ -->
+      <section class="mb-4">
+        <h2 class="titulos">
+          <i class="bi bi-chat-quote me-1"></i> Sobre mí
+        </h2>
+        <!--lh viene de Line Height o, en otras palabras, el margen entre lineas, le pondremos que queremos un delineado grande entre ellas con lg, si 
+        quisieramos algo mas pequeño podriamos optar por sm o si queremos algo intermedio por md, tambien podemos ponerle numeros que maneje Bootstrap(0 al 5)-->
+        <p class="lh-lg">
+          Soy estudiante de 2ºDAW en el Scarlatti (para mi suerte o desgracia), me gusta mucho la música y
+          coger trenes por encima de mis posibilidades económicas. También me gusta la programación
+          (depende del día), los animalitos pequeños y los roedores (no pienso cambiar mi foto de perfil de GitHub).
+          Centrándonos en mi parte más profesional, ofrezco desarrollo web con nuevas tecnologías de la mano con
+          una ligereza notoria a la hora de manejarme en cualquier dispositivo. Si deseas ver un poco más de mi
+          portfolio podrás ver mis ejercicios y trabajos más avanzados en mi página de GitHub.
+        </p>
+        <!--Ponemos btn para que bootstrap convierta nuestro enlace en un boton, podriamos hacer algo un poco mas cutre y es hacer <button><a></a></button>,
+        haciendo esta declaracion con bootstrap conseguimos exactamente lo mismo, px y py significa padding x e y respectivamente-->
+        <a href="CV Izan López Practicas 2026.pdf" class="btn boton-cv px-4 py-2">
+          <i class="bi bi-file-earmark-person-fill me-2"></i>Ver mi CV
+        </a>
+      </section>
+
+      <hr class="my-4"/>
+
+      <!-- INTERESES -->
+      <section>
+        <h2 class="titulos">
+          <i class="bi bi-stars me-1"></i> Intereses
+        </h2>
+        <!--hacer flex-wrap tras un d-flex significa lo mismo que en css-->
+        <div class="d-flex flex-wrap gap-2">
+          <span class="apartado-interes"><i class="bi bi-heart-fill me-1"></i>Animalitos</span>
+          <span class="apartado-interes"><i class="bi bi-music-note-beamed me-1"></i>Música</span>
+          <span class="apartado-interes"><i class="bi bi-book-half me-1"></i>Libros y películas de romance</span>
+          <span class="apartado-interes"><i class="bi bi-controller me-1"></i>Videojuegos</span>
+          <span class="apartado-interes"><i class="bi bi-moon-stars-fill me-1"></i>Astronomia</span>  
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-3 text-center mt-2">
+    <p class="mb-0">
+      © 2026 Izan López Ortega &nbsp;<b>·</b>&nbsp;
+      <a href="https://github.com/izanlopez32" target="_blank"><i class="bi bi-github me-1"></i>GitHub</a>
+      <a href="https://www.linkedin.com/in/izan-lopez-ortega/" target="_blank"><i class="bi bi-linkedin me-1 ms-2"></i>Linkedin</a>
+    </p>
+  </footer>
+
+  <!-- Link para importar Bootstrap en su parte de JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
